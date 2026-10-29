@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<title>PhishGuard – URL Scanner</title>
+<meta name="description" content="Check a URL for basic phishing risk indicators.">
+</head>
+<body data-page="home">
+<div class="shell">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="content">
+    <h1 data-i18n="page_title"></h1>
+    <p class="sub" data-i18n="page_sub"></p>
+    <form class="scan-form" id="scanForm" novalidate>
+        <label for="urlInput" class="sr-only" data-i18n="input_label"></label>
+        <input id="urlInput" type="text" inputmode="url" autocomplete="off" spellcheck="false" maxlength="2048" placeholder="https://example.com/login">
+        <button class="btn" type="submit" data-i18n="scan_short"></button>
+      </form>
+      <p class="field-error" id="fieldError" role="alert"></p>
+    <div class="chips"><span data-i18n="try_examples"></span>
+      <button type="button" class="chip" data-url="https://example.com">https://example.com</button>
+      <button type="button" class="chip" data-url="http://example.com:8080/login">http://example.com:8080/login</button>
+      <button type="button" class="chip" data-url="http://192.168.1.1/secure/update">http://192.168.1.1/secure/update</button>
+    </div>
+
+    <section id="recentBox" hidden>
+      <div class="section-head"><h2 data-i18n="recent_title"></h2><button class="link-btn" id="clearHistory" type="button" data-i18n="clear"></button></div>
+      <div class="table" style="margin-bottom:26px"><ul class="recent" id="recentList"></ul></div>
+    </section>
+
+    <section>
+      <h2 data-i18n="what_title"></h2>
+      <div class="checks-grid">
+        <div class="check-card"><span class="num">01</span><h3 data-i18n="c1_t"></h3><p data-i18n="c1_d"></p></div>
+        <div class="check-card"><span class="num">02</span><h3 data-i18n="c2_t"></h3><p data-i18n="c2_d"></p></div>
+        <div class="check-card"><span class="num">03</span><h3 data-i18n="c3_t"></h3><p data-i18n="c3_d"></p></div>
+        <div class="check-card"><span class="num">04</span><h3 data-i18n="c4_t"></h3><p data-i18n="c4_d"></p></div>
+        <div class="check-card"><span class="num">05</span><h3 data-i18n="c5_t"></h3><p data-i18n="c5_d"></p></div>
+        <div class="check-card"><span class="num">06</span><h3 data-i18n="c6_t"></h3><p data-i18n="c6_d"></p></div>
+        <div class="check-card"><span class="num">07</span><h3 data-i18n="c7_t"></h3><p data-i18n="c7_d"></p></div>
+      </div>
+    </section>
+    <p class="disclaimer" data-i18n="disclaimer"></p>
+  </main>
+</div>
+<script src="js/config.js"></script><script src="js/i18n.js"></script><script src="js/app.js"></script>
+</body></html>
